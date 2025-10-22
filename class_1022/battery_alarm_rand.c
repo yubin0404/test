@@ -23,16 +23,25 @@ int main(void){
             printf("배터리 경고: 잔량 %.1f%%\n", battery_level[i]);
         }
         else if (warning == 1 && 30 < battery_level[i] && battery_level[i] < 35){
+            warning = 1;
             printf("배터리 경고: 잔량 %.1f%%\n", battery_level[i]);    
-
         }
         else if (warning == 1 && battery_level[i] >= 35){
             warning = 0;
             printf("배터리 정상: 잔량 %.1f%%\n", battery_level[i]);
         }
-        else {
+        else if (warning == 0 && 30 < battery_level[i] && battery_level[i] < 35){ 
+            warning = 0;
             printf("배터리 정상: 잔량 %.1f%%\n", battery_level[i]);
         }
+        else if (warning == 0 && battery_level[i] >= 35){
+            warning = 0;
+            printf("배터리 정상: 잔량 %.1f%%\n", battery_level[i]);
+        }
+        else if (warning == 1 && battery_level[i] <= 35){
+            printf("배터리 경고: 잔량 %.1f%%\n", battery_level[i]);
+        }   
+        
     }
 
 

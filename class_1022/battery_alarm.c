@@ -4,7 +4,7 @@ int main(void){
 
     int N,i;
     double battery_level[100];
-    int warning = 0;
+    int warning = 0; // 0 : off , 1 : on
 
     for (i = 0; i < 10; i++){
         printf("배터리 잔량 입력 : ");
