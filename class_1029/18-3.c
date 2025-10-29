@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void)
+{
+    FILE *fp;
+    char str[] = "banana"; 
+    int i;
+
+    fp = fopen("b.txt","a"); // r -> 쓰기 모드, w -> 읽기 모드, a -> 이어쓰기
+    if (fp == NULL)
+    {
+        printf("파일을 만들지 못했습니다.\n");
+        return 1;
+    }
+
+    i = 0;
+    while (str[i] != '\0')
+    {
+        fputc(str[i], fp);
+        i++;
+    }
+    fputc('\n', fp);
+    fclose(fp);
+
+    return 0;
+}
