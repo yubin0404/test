@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-struct address
+typedef struct
 {
     char name[20];
     int age;
     char tel[20];
     char addr[80];
-};
+}address;
 
-void print_list(struct address *lp);
+void print_list(address *lp);
 
 int main(void)
 {
-    struct address list[5] = {
+    
+    address list1[5] = {
         {"홍길동", 23, "111-1111", "울릉도 독도"},
         {"이순신", 35, "222-2222", "서울 건천동"},
         {"장보고", 19, "333-3333", "완도 청해진"},
@@ -20,11 +21,11 @@ int main(void)
         {"안중근", 45, "555-5555", "황해도 해주"}
     };
 
-    print_list(list);
+    print_list(list1);
 
     return 0;
 }
-void print_list(struct address *lp)
+void print_list(address *lp)
 {
     int i;
 
