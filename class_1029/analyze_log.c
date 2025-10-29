@@ -18,8 +18,8 @@ int main(void)
     {
         printf("파일을 열지못했습니다.\n");
         return 1;
-
     }
+    
     while (1)
     {
         ch = fgetc(fp);
