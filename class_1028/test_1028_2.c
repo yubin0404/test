@@ -23,8 +23,8 @@ int main(void)
 
 int *func(int a, int*x){
     a = a+10;
-    x = x +1;
-    *x = *x *2;
+    x = x+1;
+    *x = *x*2;
 
     return x;
 }
