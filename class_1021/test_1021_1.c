@@ -35,9 +35,9 @@ int main(void)
     
     // 결과 출력
     printf("\n[결과]\n");
-    printf("총 구동 토크 T_tot : %.2f N·m\n", Ttot);
-    printf("가용 견인력 F_avail : %.2f N\n", Favail);
-    printf("등판 가능 최대각 : %.2f deg\n", theta_deg);
-    printf("등판율(grade) : %.1f %%\n", grade_pct);
+    printf("총 구동 토크 T_tot : %.2f N·m\n", Ttot); // Nm ,Tm, G, eta
+    printf("가용 견인력 F_avail : %.2f N\n", Favail); // Ttot, r
+    printf("등판 가능 최대각 : %.2f deg\n", theta_deg); // theta_rad, M_PI
+    printf("등판율(grade) : %.1f %%\n", grade_pct); // theta_rad
         
 }
