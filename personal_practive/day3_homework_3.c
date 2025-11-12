@@ -9,7 +9,7 @@ typedef struct
 int main(void)
 {
     Employee info[3] = {};
-    Employee *pd = info;
+    Employee *pd = info; // 중요, 구조체를 포인터로 가리킬거야
 
     for (int i = 0; i < 3; i++)
     {

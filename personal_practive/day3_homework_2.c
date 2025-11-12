@@ -10,7 +10,7 @@ typedef struct
 
 int main(void)
 {
-    Book book = {};
+    Book book;
     Book *pb = &book;
 
     printf("책 제목 입력 :");
